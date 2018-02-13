@@ -1,0 +1,70 @@
+/* GLOBAL VARIABLES */
+
+:root{
+    --main-bg-color: #efefef;
+    --debug-color: lightgreen;
+    --debug-color1: fuchsia;
+    --debug-color2: darksalmon;
+}
+
+/* MAIN */
+main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas:
+    "header header header"
+	"main-nav main-nav main-nav"
+	"shift shift instructions"
+	"footer footer footer"; 
+}
+
+/* HEADER */
+header{
+    background: var(--main-bg-color);
+    display: grid;
+    grid-area: header; 
+}
+
+/* NAVIGATION */
+.main-nav{
+    display: grid;
+    grid-gap: 10px;
+    grid-area: main-nav;
+}
+
+.main-nav ul{
+    list-style-type: none;
+}
+
+/* SHIFT */
+
+.shift{
+    background: var(--debug-color1);
+    display: grid;
+    grid-area: shift;
+    grid-gap: 20px;
+}
+
+/* INSTRUCTIONS */
+.instructions{
+    background: var(--debug-color2);
+    display: grid;
+    grid-area: instructions;
+    grid-gap: 20px;
+}
+
+.instruction-box{
+    border-bottom: solid 2px black;
+    padding: 2% 2%;
+    margin: 2% 2%;
+}
+
+/* FOOTER */
+footer{
+    text-align: center;
+    display: grid;
+    grid-area: footer;
+    background: var(--debug-color);
+}
